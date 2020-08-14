@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="chrome-extension://lkcjlnjfpbikmcmbachjpdbijejflpcm/js/steem_keychain.js"></script><script src="chrome-extension://jcacnejopjdphbnjgfaaobbfafkihpep/js/hive_keychain.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./Clear View Escapes_files/css" rel="stylesheet" type="text/css">
+    <title>Clear View Escapes</title>
+    <meta name="keywords" content="Travel planning, travel bundles, travel escapes, affordable travel">
+    <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
+  <script data-dapp-detection="">
+(function() {
+  let alreadyInsertedMetaTag = false
+
+  function __insertDappDetected() {
+    if (!alreadyInsertedMetaTag) {
+      const meta = document.createElement('meta')
+      meta.name = 'dapp-detected'
+      document.head.appendChild(meta)
+      alreadyInsertedMetaTag = true
+    }
+  }
+
+  if (window.hasOwnProperty('web3')) {
+    // Note a closure can't be used for this var because some sites like
+    // www.wnyc.org do a second script execution via eval for some reason.
+    window.__disableDappDetectionInsertion = true
+    // Likely oldWeb3 is undefined and it has a property only because
+    // we defined it. Some sites like wnyc.org are evaling all scripts
+    // that exist again, so this is protection against multiple calls.
+    if (window.web3 === undefined) {
+      return
+    }
+    __insertDappDetected()
+  } else {
+    var oldWeb3 = window.web3
+    Object.defineProperty(window, 'web3', {
+      configurable: true,
+      set: function (val) {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        oldWeb3 = val
+      },
+      get: function () {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        return oldWeb3
+      }
+    })
+  }
+})()</script><style>/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333; 
+  }
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.large-hero {
+    position: relative;
+}
+
+.large-hero__text-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+.large-hero__title {
+        font-weight: 300;
+        color: #2f5572;
+        font-size: 4.8rem;
+        margin: 0;
+    }
+
+.large-hero__subtitle {
+        font-weight: 300;
+        color: #2f5572;
+        font-size: 2.9rem;
+        margin: 0;
+    }
+
+.large-hero__description {
+        color: #ffffff;
+        font-size: 1.875rem;
+        font-weight: 100;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, .4);
+        max-width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.btn{
+    background-color: #2f5572;
+    color: #ffffff;
+    text-decoration: none;
+    padding: .75 rem 1.2rem;
+    dispaly: inline-block;
+}
+
+.btn--orange {
+        background-color: #d59541;
+    }
+
+.btn--large {
+        font-size: 1.25rem;
+        padding: 1.1rem 1.9rem;
+    }
+
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <header>
+      <img src="./Clear View Escapes_files/clear-view-escapes.svg">
+      <a href="http://localhost:3000/#" class="btn keychainify-checked steem-keychain-checked">Get in Touch</a>
+      <nav>
+        <ul>
+          <li><a href="http://localhost:3000/#our-beginning" class="keychainify-checked steem-keychain-checked">Our Beginning</a></li>
+          <li><a href="http://localhost:3000/#features" class="keychainify-checked steem-keychain-checked">Features</a></li>
+          <li><a href="http://localhost:3000/#testimonials" class="keychainify-checked steem-keychain-checked">Testimonials</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="large-hero">
+      <img src="./Clear View Escapes_files/hero--large.jpg">
+      <div class="large-hero__text-content">
+        <h1 class="large-hero__title">Your clarity.</h1>
+        <h2 class="large-hero__subtitle">One trip away.</h2>
+        <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
+        <p><a href="http://localhost:3000/#" class="btn btn--orange btn--large keychainify-checked steem-keychain-checked">Get Started Today</a></p>
+      </div>
+    </div>
+
+    <div id="our-beginning">
+      <h2>The first trip we planned was our own.</h2>
+      <h3>
+        Ever since, we’ve been working to make travel better for everyone.
+      </h3>
+      <img src="./Clear View Escapes_files/first-trip.jpg" alt="Couple walking down a street.">
+      <img src="./Clear View Escapes_files/our-start.jpg" alt="Our founder, Jane Doe">
+      <h2>Here’s how we got started…</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, <a href="http://localhost:3000/#" class="keychainify-checked steem-keychain-checked">quis nostrud exercitation</a> ullamco laboris nisi
+        ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Duis aute irure dolor in <strong>reprehenderit in</strong> voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </p>
+      <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        velit esse cillum <strong>dolore eu fugiat.</strong>
+      </p>
+    </div>
+
+    <div id="features">
+      <img src="./Clear View Escapes_files/star.svg">
+      <h2>Our Features</h2>
+
+      <img src="./Clear View Escapes_files/rain.svg">
+      <h3>We’ll Watch the Weather</h3>
+      <p>
+        Download our app and we’ll send you a notice if it’s about
+        to rain in the next 20 minutes around your current location. A good rain
+        can be refreshing, but sometimes you just want to stay dry.
+      </p>
+
+      <img src="./Clear View Escapes_files/globe.svg">
+      <h3>Global Guides</h3>
+      <p>
+        We’ve scoured the entire planet for the best retreats and
+        beautiful vistas. If there’s a corner of the world you want to
+        escape to we know the most scenic and inspiring locations.
+      </p>
+
+      <img src="./Clear View Escapes_files/wifi.svg">
+      <h3>Wi-Fi Waypoints</h3>
+      <p>
+        We only send you on trips to places we can personally vouch for as being
+        amazing. Which means we’ve mapped out where local wi-fi spots are
+        and marked them in our app’s map view.
+      </p>
+
+      <img src="./Clear View Escapes_files/fire.svg">
+      <h3>Survival Kit</h3>
+      <p>
+        Everytime you book an escape with us we send you a survival kit with the
+        finest materials. The kit will allow you to setup a tent, start a fire,
+        scratch your own back and lower your taxes.
+      </p>
+    </div>
+
+    <div id="testimonials">
+      <img src="./Clear View Escapes_files/comment.svg">
+      <h2>Real Testimonials</h2>
+
+      <img src="./Clear View Escapes_files/testimonial-jane.jpg">
+      <h3>Jane Doe</h3>
+      <h3>9 Time Escaper</h3>
+      <p>
+        “Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+        id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua.”
+      </p>
+
+      <img src="./Clear View Escapes_files/testimonial-john.jpg">
+      <h3>John Smith</h3>
+      <h3>4 Time Escaper</h3>
+      <p>
+        “Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+        id est laborum. Lorem ipsum dolor sit amet, consectetur.”
+      </p>
+
+      <img src="./Clear View Escapes_files/testimonial-cat.jpg">
+      <h3>Cat McKitty</h3>
+      <h3>6 Time Escaper</h3>
+      <p>
+        “Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+        id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit, sed do eiusmod tempor incididunt ut.”
+      </p>
+    </div>
+
+    <footer>
+      <p>
+        Copyright © 2019 Clear View Escapes. All rights reserved.
+        <a href="http://localhost:3000/#" class="btn btn--orange keychainify-checked steem-keychain-checked">Get in Touch</a>
+      </p>
+    </footer>
+    <!-- Leave this commented out HTML here until you need it for an upcoming "modal" lesson
+  <div class="modal">
+    <div class="modal__inner">
+      <h2 class="section-title section-title--blue section-title--less-margin"><img src="assets/images/icons/mail.svg" class="section-title__icon"> Get in <strong>Touch</strong></h2>
+      <div class="wrapper wrapper--narrow">
+        <p class="modal__description">We will have an online order system in place soon. Until then, connect with us on any of the platforms below!</p>
+      </div>
+
+      <div class="social-icons">
+        <a href="#" class="social-icons__icon"><img src="assets/images/icons/facebook.svg" alt="Facebook"></a>
+        <a href="#" class="social-icons__icon"><img src="assets/images/icons/twitter.svg" alt="Twitter"></a>
+        <a href="#" class="social-icons__icon"><img src="assets/images/icons/instagram.svg" alt="Instagram"></a>
+        <a href="#" class="social-icons__icon"><img src="assets/images/icons/youtube.svg" alt="YouTube"></a>
+      </div>
+    </div>
+    <div class="modal__close">X</div>
+  </div>
+  This is the end of the "modal" reference HTML -->
+    <script src="./Clear View Escapes_files/bundled.js.download"></script>
+  
+
+</body></html>
